@@ -1,20 +1,20 @@
-// Define quiz data
+// baller stuff
 const quizData = [
-  { image: 'https://cdn.discordapp.com/attachments/953151143641497660/1198917795333812325/Screenshot_2024-01-22_144058.png?ex=65c0a635&is=65ae3135&hm=454cf3e8d50f69f3262102dafd4973a8f407290d05fd9c318205b78d16eadcbf&', correctAnswer: 'Ai Hoshino' },
-  { image: 'https://cdn.discordapp.com/attachments/953151143641497660/1198918270288404530/image.png?ex=65c0a6a6&is=65ae31a6&hm=accced0a9fda40d92f5aa3f8&', correctAnswer: 'Ai Hoshino' },
+  { image: 'https://cdn.discordapp.com/attachments/953151143641497660/1198972722345164880/image.png?ex=65c0d95c&is=65ae645c&hm=c5f7fe237600c1ab77ba69b54955556ae7f2f629faa1e68e5f5cb86c8210cd5a&', correctAnswer: 'Minami Kotobuki' },
+  
+  { image: 'https://cdn.discordapp.com/attachments/953151143641497660/1198973038411141210/image.png?ex=65c0d9a8&is=65ae64a8&hm=b90f4c48d4579cf59071a443cf7cfb789101942e62ecf32d44728bbdb5fe4e9e&', correctAnswer: 'Minami Kotobuki' },
 
-    { image: 'https://cdn.discordapp.com/attachments/953151143641497660/1198918490439028807/image.png?ex=65c0a6da&is=65ae31da&hm=34801f28e5090e7d5c31568b4d33ec7c0df41902aab011e7c8e89c4912096891&', correctAnswer: 'Ai Hoshino' },
+    { image: 'https://cdn.discordapp.com/attachments/953151143641497660/1198973246373122068/image.png?ex=65c0d9d9&is=65ae64d9&hm=89f548ecff16582a4f4bb2e1a3b609d9d74b1c1f34888ba778b4eb35d6d57ecc&', correctAnswer: 'Minami Kotobuki' },
 
-   { image: 'https://cdn.discordapp.com/attachments/953151143641497660/1198919266506911815/image.png?ex=65c0a793&is=65ae3293&hm=3f32b591e38c44e43f56adb69ac5780e1415572d57eadae5d2b38b4f63edcdc1&', correctAnswer: 'Ai Hoshino' },
-  // Add more quiz data as needed
+   { image: 'https://cdn.discordapp.com/attachments/953151143641497660/1198973849929261178/image.png?ex=65c0da69&is=65ae6569&hm=5a4377553e673319aa1d856d4116d4666f0a51e6ca8b97f1aaee0f69ed803486&', correctAnswer: 'Minami Kotobuki' },
 ];
 
 const localStorageKey = 'quizAttemptTimestamp';
 
 let currentQuestion = 0;
-let chancesLeft = 4;
+let chancesLeft = 4; // nah id win
 
-// Function to initialize the quiz
+// Function to initialize
 function initializeQuiz() {
   const lastAttemptTimestamp = localStorage.getItem(localStorageKey);
 
@@ -39,7 +39,7 @@ function showQuestion() {
   document.getElementById('answer').disabled = false; // Enable the answer input field
 }
 
-// Function to check the user's answer
+// check the user's answer
 function checkAnswer() {
   const userAnswer = document.getElementById('answer').value.toLowerCase();
   const correctAnswer = quizData[currentQuestion].correctAnswer.toLowerCase();
@@ -51,14 +51,14 @@ function checkAnswer() {
     chancesLeft--;
     if (chancesLeft > 0) {
       document.getElementById('result').textContent = `Wrong answer! Chances left: ${chancesLeft}`;
-      // Show the next hint image
+      // Show next hint image
       currentQuestion++;
       showQuestion();
     } else {
-      // On the 4th attempt, show full image and correct answer
+      // correct answer
       document.getElementById('result').textContent = `Incorrect! The correct answer is ${correctAnswer}`;
       document.getElementById('quiz-image').src = quizData[currentQuestion].image;
-      // Disable the answer input field
+      // Disable the answer input
       document.getElementById('answer').disabled = true;
       // Save the timestamp of the quiz attempt in local storage
       localStorage.setItem(localStorageKey, new Date().getTime().toString());
@@ -72,11 +72,11 @@ function toggleDarkMode() {
   body.classList.toggle('dark-mode');
 }
 
-// Function to disable the quiz (used when the user has attempted today)
+// Function to disable the quiz
 function disableQuiz() {
   document.getElementById('answer').disabled = true;
   document.querySelector('button').disabled = true;
 }
 
-// Initialize the quiz when the page loads
+// Initialize the quiz
 window.onload = initializeQuiz;
