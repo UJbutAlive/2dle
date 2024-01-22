@@ -10,20 +10,14 @@
 
 <div id="quiz-container">
   <h1>2dle</h1>
-
-  <!-- Image container for quiz question -->
-  <div id="question-image-container">
+  <div id="image-container">
     <img id="quiz-image" src="" alt="Quiz Image">
   </div>
-
   <label for="answer">Your Answer:</label>
   <input type="text" id="answer" placeholder="Type your answer">
-  <button id="submit-button" onclick="checkAnswer()">Submit Answer</button>
-  <button class="dark-mode-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-
-  <!-- Result section for quiz -->
-  <div id="result"></div>
-
+  <button onclick="checkAnswer()">Submit Answer</button>
+  <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <p id="result"></p>
   <script src="script.js"></script>
 </div>
 
