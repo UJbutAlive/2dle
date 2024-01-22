@@ -19,28 +19,29 @@ function initializeQuiz() {
 
 // Function to display the current question
 function showQuestion() {
-  document.getElementById('question-image-container').style.display = 'block';
   document.getElementById('quiz-image').src = quizData[currentQuestion].image;
-  document.getElementById('submit-button').disabled = false; // Enable the submit button
 }
 
 // Function to check the user's answer
 function checkAnswer() {
   const userAnswer = document.getElementById('answer').value.toLowerCase();
   const correctAnswer = quizData[currentQuestion].correctAnswer.toLowerCase();
-  const submitButton = document.getElementById('submit-button');
 
   if (userAnswer === correctAnswer) {
     document.getElementById('result').textContent = 'Correct! You guessed it!';
-    submitButton.disabled = true; // Disable the submit button
   } else {
     chancesLeft--;
     if (chancesLeft > 0) {
       document.getElementById('result').textContent = `Wrong answer! Chances left: ${chancesLeft}`;
+      // Show the next hint image
+      currentQuestion++;
+      showQuestion();
     } else {
-      // On the 4th attempt, show correct answer
+      // On the 4th attempt, show full image and correct answer
       document.getElementById('result').textContent = `Incorrect! The correct answer is ${correctAnswer}`;
-      submitButton.disabled = true; // Disable the submit button
+      document.getElementById('quiz-image').src = quizData[currentQuestion].image;
+      // Disable the answer input field
+      document.getElementById('answer').disabled = true;
     }
   }
 }
