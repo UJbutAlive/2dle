@@ -1,4 +1,4 @@
-// baller stuff
+// baller stuff, if opened this for the answer, youre weak
 const quizData = [
   { image: 'https://cdn.discordapp.com/attachments/953151143641497660/1198972722345164880/image.png?ex=65c0d95c&is=65ae645c&hm=c5f7fe237600c1ab77ba69b54955556ae7f2f629faa1e68e5f5cb86c8210cd5a&', correctAnswer: 'Minami Kotobuki' },
   
