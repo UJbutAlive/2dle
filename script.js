@@ -1,12 +1,12 @@
 // baller stuff, if opened this for the answer, youre weak. If you opened this for studying it you're strong stand proud.
 const quizData = [
-  { image: 'https://cdn.discordapp.com/attachments/953151143641497660/1198972722345164880/image.png?ex=65c0d95c&is=65ae645c&hm=c5f7fe237600c1ab77ba69b54955556ae7f2f629faa1e68e5f5cb86c8210cd5a&', correctAnswer: 'Minami Kotobuki' },
+  { image: 'https://cdn.discordapp.com/attachments/953151143641497660/1199278267627229255/image.png?ex=65c1f5ec&is=65af80ec&hm=77c91dcc1108847db01191b2cd9d3ee88d665b8034bf512cb03d7b3e17628df2&', correctAnswer: 'Kurisu Makise' },
   
-  { image: 'https://cdn.discordapp.com/attachments/953151143641497660/1198973038411141210/image.png?ex=65c0d9a8&is=65ae64a8&hm=b90f4c48d4579cf59071a443cf7cfb789101942e62ecf32d44728bbdb5fe4e9e&', correctAnswer: 'Minami Kotobuki' },
+  { image: 'https://cdn.discordapp.com/attachments/953151143641497660/1199278338372554772/image.png?ex=65c1f5fd&is=65af80fd&hm=1e9204256a87300a1517dbab3ab5fa4b6a70b2093f376a6a221499d13b839fda&', correctAnswer: 'Kurisu Makise' },
 
-    { image: 'https://cdn.discordapp.com/attachments/953151143641497660/1198973246373122068/image.png?ex=65c0d9d9&is=65ae64d9&hm=89f548ecff16582a4f4bb2e1a3b609d9d74b1c1f34888ba778b4eb35d6d57ecc&', correctAnswer: 'Minami Kotobuki' },
+    { image: 'https://cdn.discordapp.com/attachments/953151143641497660/1199278391703126037/image.png?ex=65c1f60a&is=65af810a&hm=522539067a2dfb552c38ddd317f098daaa87281b64af9c7381edad8cdd41ca1a&', correctAnswer: 'Kurisu Makise' },
 
-   { image: 'https://cdn.discordapp.com/attachments/953151143641497660/1198973849929261178/image.png?ex=65c0da69&is=65ae6569&hm=5a4377553e673319aa1d856d4116d4666f0a51e6ca8b97f1aaee0f69ed803486&', correctAnswer: 'Minami Kotobuki' },
+   { image: 'https://cdn.discordapp.com/attachments/953151143641497660/1199278447877431357/image.png?ex=65c1f617&is=65af8117&hm=5b2155c3adccde9517d6a6c074858b3a5d62df7d7822cbd54cf75965968d1ada&', correctAnswer: 'Kurisu Makise' },
 ];
 
 let currentQuestion = 0;
